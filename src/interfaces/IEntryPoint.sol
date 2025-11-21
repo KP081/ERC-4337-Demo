@@ -9,10 +9,11 @@ interface IEntryPoint {
         address payable beneficiary
     ) external;
 
-    function getUserOpHash(UserOperation calldata userOp) 
-        external view returns (bytes32);
-    
+    function getUserOpHash(
+        UserOperation calldata userOp
+    ) external view returns (bytes32);
+
     function depositTo(address account) external payable;
-    
+
     function balanceOf(address account) external view returns (uint256);
 }
